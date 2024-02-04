@@ -1,4 +1,5 @@
 let carrito = {};
+let totalCarrito = 0;
 
 // Función para agregar un producto al carrito
 function agregarAlCarrito(producto) {
@@ -8,9 +9,15 @@ function agregarAlCarrito(producto) {
   } else {
     carrito[producto] = 1;
   }
-
+  totalCarrito ++;
   mostrarCarrito(); 
 }
+function actualizarNumeroCarrito() {
+  let numeroCarrito = document.getElementById('numeroCarrito');
+  numeroCarrito.textContent = totalCarrito.toString(); // Mostrar el contador como texto
+}
+
+
 
 // Función para mostrar el contenido del carrito
 function mostrarCarrito() {
@@ -38,6 +45,8 @@ function mostrarCarrito() {
 
   botonCerrar.onclick = cerrarCarro;
   botonVaciar.onclick = vaciarCarrito;
+  actualizarNumeroCarrito();
+
 }
 
 function cerrarCarro(){
@@ -47,6 +56,7 @@ function cerrarCarro(){
 
 function vaciarCarrito(){
   carrito = {}; // Vaciar el objeto del carrito
+  totalCarrito = 0;
   mostrarCarrito()
 }
 // Obtener todos los botones en la página
