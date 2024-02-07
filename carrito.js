@@ -22,6 +22,7 @@ function actualizarNumeroCarrito() {
 // Función para mostrar el contenido del carrito
 function mostrarCarrito() {
   let contenidoCarrito = document.getElementById("cartContent");
+  contenidoCarrito.classList.add('d-flex', 'justify-content-end');
   let botonCompra = document.createElement("button");
   let botonCerrar = document.createElement("button");
   let botonVaciar = document.createElement("button");
@@ -29,6 +30,7 @@ function mostrarCarrito() {
   let itemsCarrito = Object.keys(carrito).map(function (producto) {//map() crea un nuevo array con los resultados de llamar a una función para cada elemento del array. En este caso, para cada producto en el carrito, se ejecuta la función que toma el producto como argumento.
     return producto + " (" + carrito[producto] + ")";//toma el nombre del producto como argumento y devuelve el nombre y la cantidad del producto en el carrito
   });
+  
   contenidoCarrito.innerHTML = "Tu cesta contiene: " + "<br>" + itemsCarrito.join("<br>");
 
   botonCompra.setAttribute("id", "compra");
@@ -45,13 +47,14 @@ function mostrarCarrito() {
 
   botonCerrar.onclick = cerrarCarro;
   botonVaciar.onclick = vaciarCarrito;
+  
   actualizarNumeroCarrito();
-
+ 
 }
 
 function cerrarCarro(){
   let contenidoCarrito = document.getElementById('cartContent');
-  contenidoCarrito.classList.remove('cart-visible');
+  contenidoCarrito.classList.add('d-none');
 }
 
 function vaciarCarrito(){
@@ -73,8 +76,8 @@ botones.forEach(function (boton) {// el foreach recoge los elementos del array b
 // Función para mostrar u ocultar el contenido del carrito
 function alternarCarrito() {
     let contenidoCarrito = document.getElementById('cartContent');
-    contenidoCarrito.classList.toggle('cart-visible');//classList devulve un objeto con las clases de un elemento y el toggle cambia entre las clases
-  }
+    contenidoCarrito.classList.toggle('d-none');//classList devulve un objeto con las clases de un elemento y el toggle cambia entre las clases
+}
   
   // Agregar un escucha de evento de clic al ícono del carrito
 document.getElementById('cartIcon').addEventListener('click', function(event) {
