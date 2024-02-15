@@ -22,40 +22,35 @@ function actualizarNumeroCarrito() {
 // Función para mostrar el contenido del carrito
 function mostrarCarrito() {
   let contenidoCarrito = document.getElementById("cartContent");
-  contenidoCarrito.classList.add('d-flex', 'justify-content-end');
+  contenidoCarrito.classList.add('d-flex', 'flex-column');
+  let divBotones = document.createElement("div");
   let botonCompra = document.createElement("button");
-  let botonCerrar = document.createElement("button");
+  
   let botonVaciar = document.createElement("button");
 
   let itemsCarrito = Object.keys(carrito).map(function (producto) {//map() crea un nuevo array con los resultados de llamar a una función para cada elemento del array. En este caso, para cada producto en el carrito, se ejecuta la función que toma el producto como argumento.
     return producto + " (" + carrito[producto] + ")";//toma el nombre del producto como argumento y devuelve el nombre y la cantidad del producto en el carrito
   });
-  
-  contenidoCarrito.innerHTML = "Tu cesta contiene: " + "<br>" + itemsCarrito.join("<br>");
-
   botonCompra.setAttribute("id", "compra");
-  botonCerrar.setAttribute("id", "cerrarCarrito");
   botonVaciar.setAttribute("id", "vaciarCarrito");
 
   botonCompra.innerHTML = "Comprar";
-  botonCerrar.innerHTML = "Cerrar";
   botonVaciar.innerHTML = "Vaciar";
 
-  contenidoCarrito.appendChild(botonCompra);  
-  contenidoCarrito.appendChild(botonCerrar);
-  contenidoCarrito.appendChild(botonVaciar);
+  divBotones.appendChild(botonCompra); 
+  divBotones.appendChild(botonVaciar);
 
-  botonCerrar.onclick = cerrarCarro;
+  
   botonVaciar.onclick = vaciarCarrito;
+  
+  contenidoCarrito.innerHTML = "Tu cesta contiene: " + "<br>" + itemsCarrito.join("<br>");
+  contenidoCarrito.appendChild(divBotones); 
   
   actualizarNumeroCarrito();
  
 }
 
-function cerrarCarro(){
-  let contenidoCarrito = document.getElementById('cartContent');
-  contenidoCarrito.classList.add('d-none');
-}
+
 
 function vaciarCarrito(){
   carrito = {}; // Vaciar el objeto del carrito

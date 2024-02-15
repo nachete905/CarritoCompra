@@ -9,136 +9,147 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container-fluid d-flex flex-column">
+  <div class="container.fluid d-flex flex-column">
     <nav class="navbar navbar-expand-lg navbar-light bg-primary col-xl-12 col-sm-12">
       <div class="container-fluid">
-        <a class="navbar-brand ms-auto" href="#" id="cartIcon">
-          <i id="modalCesta" class="bi bi-basket-fill"></i>
+        <div class="navbar-brand ms-auto" href="#" id="cartIcon">
+          <i id="modalCesta" class="bi bi-basket-fill" data-bs-toggle="modal" data-bs-target="#myModalCesta"></i>
+          <div class="modal fade" id="myModalCesta" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                 <div id="cartContent" class="modal-body col-xl-12 col-sm-12 d-none">Tu cesta esta vacia</div> 
+              </div>
+            </div>
+          </div>
+          </div>
           <span id="numeroCarrito" class="badge bg-danger">0</span>
-        </a>
+        </div>
       </div>
     </nav>
-    <div id="cartContent" class="cart-content col-xl-12 col-sm-12 d-none">
-      Tu cesta esta vacia
-    </div>
-    <div class="d-flex justify-content-between">
-      <div class="col-xl-2 col-sm-6">
-        <div class="card">
-          <img class="card-img-top" id="imagenCulinaria" src="img/experienciaCulinaria.jpeg" data-bs-toggle="modal" data-bs-target="#myModal"/>
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">
-                    Experiencia culinaria en Madrid
-                  </h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis perspiciatis culpa, praesentium eos ipsa autem quo aliquam pariatur doloremque amet esse aut illum tempore mollitia. Possimus similique tempore voluptatibus?
+    
+     <div class="container.fluid">
+      <div class="row  justify-content-center">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="card">
+            <img class="card-img-top" id="imagenCulinaria" src="img/experienciaCulinaria.jpeg" data-bs-toggle="modal" data-bs-target="#myModal"/>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Experiencia culinaria en Madrid
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  </div>
+                  <div class="modal-body">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis perspiciatis culpa, praesentium eos ipsa autem quo aliquam pariatur doloremque amet esse aut illum tempore mollitia. Possimus similique tempore voluptatibus?
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="card-body">
+              <h5 class="card-title">Experiencia culinaria</h5>
+              <button id="añadir">Añadir al carrito</button>
+            </div>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Experiencia Culinaria</h5>
-            <button id="añadir">Añadir al carrito</button>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="card">
+            <img class="card-img-top" id="imagenTour" src="img/tourMadrid.jpeg" data-bs-toggle="modal" data-bs-target="#myModal2"/>
+            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel2">
+                      Tour cultural por Madrid
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  </div>
+                  <div class="modal-body">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis perspiciatis culpa, praesentium eos ipsa autem quo aliquam pariatur doloremque amet esse aut illum tempore mollitia. Possimus similique tempore voluptatibus?
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Tour cultural</h5>
+              <button>Añadir al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="card">
+            <img class="card-img-top" id="imagenExperiencia" src="img/ExperienciaHotel.jpeg" data-bs-toggle="modal" data-bs-target="#myModal3"/>
+            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Experiencias hotel
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  </div>
+                  <div class="modal-body">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis perspiciatis culpa, praesentium eos ipsa autem quo aliquam pariatur doloremque amet esse aut illum tempore mollitia. Possimus similique tempore voluptatibus?
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Expreriencias hotel</h5>
+              <button id="añadir">Añadir al carrito</button>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-xl-2 col-sm-6">
-        <div class="card">
-          <img class="card-img-top" id="imagenTour" src="img/tourMadrid.jpeg" data-bs-toggle="modal" data-bs-target="#myModal2"/>
-          <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel2">
-                    Tour cultural por Madrid
-                  </h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis perspiciatis culpa, praesentium eos ipsa autem quo aliquam pariatur doloremque amet esse aut illum tempore mollitia. Possimus similique tempore voluptatibus?
+      <div class="row  justify-content-center">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="card">
+            <img class="card-img-top" id="imagenSpa" src="img/spaMadrid.jpeg" data-bs-toggle="modal" data-bs-target="#myModal4"/>
+            <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Relajación en Spa
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  </div>
+                  <div class="modal-body">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis perspiciatis culpa, praesentium eos ipsa autem quo aliquam pariatur doloremque amet esse aut illum tempore mollitia. Possimus similique tempore voluptatibus?
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Tour cultural</h5>
-            <button>Añadir al carrito</button>
+            <div class="card-body">
+              <h5 class="card-title">Relajación en Spa</h5>
+              <button id="añadir">Añadir al carrito</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-xl-2 col-sm-6">
-        <div class="card">
-          <img class="card-img-top" id="imagenSpa" src="img/spaMadrid.jpeg" data-bs-toggle="modal" data-bs-target="#myModal3"/>
-          <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel2">
-                    Relajación en spa
-                  </h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                  Lorem, xd ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis perspiciatis culpa, praesentium eos ipsa autem quo aliquam pariatur doloremque amet esse aut illum tempore mollitia. Possimus similique tempore voluptatibus?
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Relajación en spa</h5>
-            <button>Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-2 col-sm-6">
-        <div class="card">
-          <img class="card-img-top" id="imagenCulinaria" src="img/experienciaCulinaria.jpeg" data-bs-toggle="modal" data-bs-target="#myModal"/>
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">
-                    Experiencia culinaria en Madrid
-                  </h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis perspiciatis culpa, praesentium eos ipsa autem quo aliquam pariatur doloremque amet esse aut illum tempore mollitia. Possimus similique tempore voluptatibus?
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12   ">
+          <div class="card">
+            <img class="card-img-top" id="imagenDeporte" src="img/acticidadesDeportivas.jpeg" data-bs-toggle="modal" data-bs-target="#myModal5"/>
+            <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                      Deportes
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  </div>
+                  <div class="modal-body">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis perspiciatis culpa, praesentium eos ipsa autem quo aliquam pariatur doloremque amet esse aut illum tempore mollitia. Possimus similique tempore voluptatibus?
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Experiencia Culinaria</h5>
-            <button id="añadir">Añadir al carrito</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-2 col-sm-6">
-        <div class="card">
-          <img class="card-img-top" id="imagenCulinaria" src="img/experienciaCulinaria.jpeg" data-bs-toggle="modal" data-bs-target="#myModal"/>
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">
-                    Experiencia culinaria en Madrid
-                  </h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, blanditiis perspiciatis culpa, praesentium eos ipsa autem quo aliquam pariatur doloremque amet esse aut illum tempore mollitia. Possimus similique tempore voluptatibus?
-                </div>
-              </div>
+            <div class="card-body">
+              <h5 class="card-title"> Experiencia Deportes</h5>
+              <button id="añadir">Añadir al carrito</button>
             </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Experiencia Culinaria</h5>
-            <button id="añadir">Añadir al carrito</button>
           </div>
         </div>
       </div>
