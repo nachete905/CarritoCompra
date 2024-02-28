@@ -28,27 +28,31 @@ function mostrarCarrito() {
   
   let botonVaciar = document.createElement("button");
 
-  let itemsCarrito = Object.keys(carrito).map(function (producto) {//map() crea un nuevo array con los resultados de llamar a una función para cada elemento del array. En este caso, para cada producto en el carrito, se ejecuta la función que toma el producto como argumento.
-    return producto + " (" + carrito[producto] + ")";//toma el nombre del producto como argumento y devuelve el nombre y la cantidad del producto en el carrito
+  let itemsCarrito = Object.keys(carrito).map(function (producto) {
+    return producto + " (" + carrito[producto] + ")";
   });
-  botonCompra.setAttribute("id", "compra");
-  botonVaciar.setAttribute("id", "vaciarCarrito");
 
+  // Asignar clases y estilos al botón de Comprar
+  botonCompra.setAttribute("id", "compra");
+  botonCompra.setAttribute("class", "boton-compra"); // Añade una clase al botón
   botonCompra.innerHTML = "Comprar";
+
+  // Asignar clases y estilos al botón de Vaciar
+  botonVaciar.setAttribute("id", "vaciarCarrito");
+  botonVaciar.setAttribute("class", "boton-vaciar"); // Añade una clase al botón
   botonVaciar.innerHTML = "Vaciar";
 
   divBotones.appendChild(botonCompra); 
   divBotones.appendChild(botonVaciar);
 
-  
   botonVaciar.onclick = vaciarCarrito;
   
   contenidoCarrito.innerHTML = "Tu cesta contiene: " + "<br>" + itemsCarrito.join("<br>");
   contenidoCarrito.appendChild(divBotones); 
   
   actualizarNumeroCarrito();
- 
 }
+
 
 
 
